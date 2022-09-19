@@ -1,0 +1,62 @@
+@use 'variable' as var;
+
+.container-footer {
+    box-shadow: rgba(171, 190, 206, 0.48) 0px -6px 16px 0px, rgba(255, 255, 255, 0.8) 0px -6px 16px 0px;
+    .footer {
+        .container {
+            .row {
+                .col {
+                    .list {
+                        padding: 0;
+                        list-style: none;
+                        li {
+                            a {
+                                text-decoration: none;
+                                font-family: var.$titleFont;
+                                font-size: 14.5px;
+                                letter-spacing: .4px;
+                                color: #555;
+                            }
+                            a:hover {
+                                text-decoration: underline cornflowerblue;
+                                color: cornflowerblue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .text-center {
+            border-top: 1px solid rgba(68, 68, 68, 0.322);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .text-uppercase {
+                font-family: var.$titleFont;
+                letter-spacing: 2px;
+                font-size: 21px;
+            }
+            .moto {
+                font-size: 15px;
+                color: #444;
+                font-family: sans-serif;
+            }
+            .icon-footer {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                column-gap: 18px;
+                a {
+                    .fa-brands {
+                        color: #555;
+                        font-size: 21px;
+                        cursor: pointer;
+                    }
+                    .fa-github:hover {color: #000;}
+                    .fa-twitter:hover {color: rgb(91, 168, 219);}
+                    .fa-instagram:hover {color: crimson;}
+                    .fa-facebook:hover {color: royalblue;}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+
+
+.modal {
+    .modal-dialog {
+        .modal-content {
+            .modal-body {
+                .p-2 {
+                    .form-control::placeholder {
+                        font-size: 14px;
+                    }
+                }
+                .cb {
+                    .form-check-label {
+                        font-size: 15px;
+                        letter-spacing: -.1px;
+                        color: rgba(70, 70, 70, 0.795);
+                    }
+                }
+                .px-2 {
+                    .form-label {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

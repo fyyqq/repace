@@ -1,0 +1,26 @@
+@use 'navbar';
+@use 'modal';
+@use 'header';
+@use 'accordion';
+@use 'about1';
+@use 'about2';
+@use 'about3';
+@use 'footer';
+@use 'variable' as var;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: map-get($map: var.$bgc, $key: 'light-mate');
+}
+
+
+

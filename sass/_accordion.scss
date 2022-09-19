@@ -1,0 +1,86 @@
+@use 'variable' as var;
+
+.article-about {
+    height: 500px;
+    width: 100%;
+    padding-top: 105px;
+    .row {
+        display: flex;
+        flex-direction: column;
+        .text-col-about {
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .h1 {
+                font-family: var.$titleFont;
+            }
+        }
+        .col-md-8 {
+            height: 60%;
+            margin: 0 auto;
+            padding-top: 45px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .accordion {
+            .accordion-item {
+                .accordion-header {
+                    .accordion-button {
+                        font-size: 16px;
+                        color: #444;
+                    }
+                    .accordion-button:hover {
+                        color: #000;
+                    }
+                }
+                .accordion-collapse {
+                    .accordion-body {
+                        p {
+                            color: #666;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* mobile phone size */
+@media screen and (max-width: 500px) {
+    .article-about {
+        height: 400px;
+        width: 100%;
+        margin-top: 0px;
+        padding-top: 0px;
+        .row {
+            padding-top: 80px;
+            .text-col-about {
+                .h1 {
+                    font-size: 26px;
+                }
+            }
+            .col-md-8 {
+                margin-top: 20px;
+                .accordion {
+                    .accordion-item {
+                        .accordion-header {
+                            .accordion-button {
+                                font-size: 14px;
+                                color: #666;
+                            }
+                        }
+                        .accordion-collapse {
+                            .accordion-body {
+                                p {
+                                    font-size: 13.7px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

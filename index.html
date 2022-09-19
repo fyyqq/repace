@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5e539df1ae.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Repace - Get Your Favourite Casual Shirt Here</title>
+</head>
+<body>
+    <span id="home"></span>
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container-fluid d-flex px-md-5 px-3">
+            <!-- navbar-logo -->
+            <a href="#home" class="navbar-brand">
+                <span class="h3 title-logo">Repace</span>
+            </a>
+            <!-- navbar-btn -->
+            <button class="navbar-toggler" data-bs-target="#showNavbar" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- navbar-list -->
+            <div class="navbar-collapse collapse" id="showNavbar">
+                <div class="mx-auto"></div>
+                <div class="navbar-nav">
+                    <!-- first list-link -->
+                    <li class="me-md-2 me-0">
+                        <a href="#home" class="nav-link" style="padding-bottom: 5px;">Home</a>
+                    </li>
+                    <!-- second list-link -->
+                    <li class="me-md-2 me-0">
+                        <a href="#explore" class="nav-link">Explore</a>
+                    </li>
+                    <!-- third list-link -->
+                    <li class="me-md-3 me-0">
+                        <a href="./product.html" class="nav-link">Product</a>
+                    </li>
+                    <!-- fourth list link -->
+                    <li class="mb-md-0 mb-2 me-md-2 me-0 nav-cart">
+                        <a href="#cart" class="nav-link">Cart</a>
+                    </li>
+                    <!-- cart icon for dekstop screen only -->
+                    <li class="me-md-4 me-0 mb-md-0 mb-2 nav-link-cart">
+                        <a href="#cart" class="d-block text-center btn btn-outline-warning" data-bs-toggle="tooltip" title="go to cart">
+                            <i class="fa-solid fa-cart-shopping position-relative" style="font-size: 14px;"></i>
+                            <span class="badge bg-danger rounded-pill" style="position:absolute;top:13px;transform: translate(-2px, 1px);font-size: 0.68em;">0</span>
+                        </a>
+                    </li>
+                    <!-- sign up button -->
+                    <li class="row">
+                        <!-- modal button -->
+                        <button class="btn px-4 btn-primary" data-bs-toggle="modal" data-bs-target="#showSignUpModal" type="button">Sign Up</button>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- SignUp Modal -->
+    <div class="modal fade" id="showSignUpModal">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down">
+            <div class="modal-content">
+                <!-- modal header -->
+                <div class="modal-header">
+                    <p class="modal-title h5">Sign up here...</p>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- modal body -->
+                <div class="modal-body py-4">
+                    <!-- modal profile img -->
+                    <div class="text-center pt-2 mb-4">
+                        <img src="./images/profile.jpg" class="rounded border border-secondary rounded-pill" style="width:130px; cursor: pointer;" data-bs-toggle="tooltip" title="Picture will be updated soon...">
+                    </div>
+                    <!-- input -->
+                    <form class="px-2 mb-4">
+                        <label class="form-label h5">Your Email Address :</label>
+                        <input type="email" class="form-control" placeholder="Type your email address...">
+                    </form>
+                    <!-- input -->
+                    <form class="px-2 mb-4">
+                        <label class="form-label h5">Your Password :</label>
+                        <input type="password" class="form-control" placeholder="Type your password...">
+                    </form>
+                    <!-- checkbox -->
+                    <form class="px-2 cb">
+                        <input type="checkbox" id="formCheck" class="form-check-input me-1">
+                        <label for="formCheck" class="form-check-label fw-normal">checked before sign in</label>
+                    </form>
+                </div>
+                <!-- modal footer -->
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center" style="width:100%;">
+                        <a href="#signin" data-bs-target="#showSignInModal" data-bs-toggle="modal" data-bs-dismiss="modal">Have an account ?</a>
+                        <button class="btn btn-primary px-4">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SignIn Modal -->
+    <div class="modal fade" id="showSignInModal">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down">
+            <div class="modal-content">
+                <!-- modal header -->
+                <div class="modal-header">
+                    <p class="modal-title h5">Sign In here...</p>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- modal body -->
+                <div class="modal-body py-4">
+                    <!-- modal profile img -->
+                    <div class="text-center pt-2 mb-4">
+                        <img src="./images/profile.jpg" class="rounded border border-secondary rounded-pill" style="width:130px; cursor: pointer;" data-bs-toggle="tooltip" title="Picture will be updated soon...">
+                    </div>
+                    <!-- input -->
+                    <form class="px-2 mb-4">
+                        <label class="form-label h5">Your Email Address :</label>
+                        <input type="email" class="form-control" placeholder="Type your email address...">
+                    </form>
+                    <!-- input -->
+                    <form class="px-2 mb-4">
+                        <label class="form-label h5">Your Password :</label>
+                        <input type="password" class="form-control" placeholder="Type your password...">
+                    </form>
+                     <!-- checkbox -->
+                    <form class="px-2 cb">
+                        <input type="checkbox" id="formCheck" class="form-check-input me-1" checked>
+                        <label for="formCheck" class="form-check-label fw-normal">checked before sign up</label>
+                    </form>
+                </div>
+                <!-- modal footer -->
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center" style="width:100%;">
+                        <a href="#signup" data-bs-toggle="modal" data-bs-target="#showSignUpModal" data-bs-dismiss="modal">Doesn't an account ?</a>
+                        <button class="btn btn-primary px-4">Sign In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="container-lg ps-0 pe-0 header">
+        <div class="row">
+            <!-- Title Header -->
+            <div class="col first-col">
+                <p class="display-2">Your Choice's Here</p>
+                <p class="w-75">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci maiores sunt magni.</p>
+                <a href="#explore" class="btn btn-outline-success position-relative mt-2" style="width:120px;">Explore
+                    <i class="fa-solid fa-arrow-down ms-2" style="font-size: 14px;"></i>
+                </a>
+            </div>
+            <!-- Image Header -->
+            <div class="col-12 d-flex justify-content-center second-col" style="height:100%;">
+                <div class="d-flex align-items-center">
+                    <div class="carousel slide" id="carousel-btn" data-bs-ride="carousel">
+                        <div class="carousel-inner" style="border: 6px solid white;border-radius: 15px;">
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="https://www.girav.nl/media/catalog/product/cache/2279ff87d7d2e776e09e09647e62cff5/_/0/_0072_marbella_polo_estate_blue-27.webp" class="w-100">
+                            </div>
+                            <div class="carousel-item active" data-bs-interval="2000">
+                                <img src="https://www.girav.nl/media/catalog/product/cache/2279ff87d7d2e776e09e09647e62cff5/_/0/_0026_toronto_longsleeve_black-25.webp" class="w-100">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="https://www.girav.nl/media/catalog/product/cache/2279ff87d7d2e776e09e09647e62cff5/_/0/_0165_sydney_copper-32.webp" class="w-100">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="https://www.girav.nl/media/catalog/product/cache/2279ff87d7d2e776e09e09647e62cff5/_/0/_0038_leeds_bomber_jacket_black-22.webp" class="w-100">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="https://www.girav.nl/media/catalog/product/cache/2279ff87d7d2e776e09e09647e62cff5/_/0/_0067_barcelona_wit-22.webp" class="w-100">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="https://www.girav.nl/media/catalog/product/cache/2279ff87d7d2e776e09e09647e62cff5/h/a/harvard_hoodie_serenity_blue_1_1.webp" class="w-100">
+                            </div>
+                        </div>
+                        <!--div class="carousel-indicators">
+                            <button class="active" data-bs-target="#carousel-btn" data-bs-slide-to="0"></button>
+                            <button class="mx-2" data-bs-target="#carousel-btn" data-bs-slide-to="1"></button>
+                            <button data-bs-target="#carousel-btn" data-bs-slide-to="2"></button>
+                        </div>
+                        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carousel-btn" data-bs-toggle="tooltip" title="Slide Left">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carousel-btn" data-bs-toggle="tooltip" title="Slide Right">
+                            <span class="carousel-control-next-icon"></span>
+                        </button-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <span id="about"></span>
+    <article class="container-lg article-about">
+        <div class="row">
+            <!-- about Title -->
+            <section class="col text-center text-col-about">
+                <p class="h1">Why Buy As A Consumer</p>
+            </section>
+            <!-- about accordion -->
+            <section class="col-md-8 col">
+                <!-- accordion -->
+                <div class="accordion" id="accordion-parent">
+                    <!-- accordion 1 -->
+                    <div class="accordion-item">
+                        <!-- accordion header 1 -->
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion1">Lowest Price</button>
+                        </div>
+                        <!-- accordion body 1 -->
+                        <div class="accordion-collapse collapse" id="accordion1" data-bs-parent="#accordion-parent">
+                            <div class="accordion-body">
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis totam accusantium harum molestias! Quos, architecto esse. Qui, quidem atque vero laborum itaque obcaecati repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nam?. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde molestias fuga architecto dolorum inventore cupiditate.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- accordion 2 -->
+                    <div class="accordion-item">
+                        <!-- accordion header 2 -->
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-target="#accordion2" data-bs-toggle="collapse">High Quality</button>
+                        </div>
+                        <!-- accordion body 2 -->
+                        <div class="accordion-collapse collapse" id="accordion2" data-bs-parent="#accordion-parent">
+                            <div class="accordion-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, reprehenderit fuga laborum eius labore quis explicabo, veniam iste temporibus mollitia reiciendis dolore repellat, rem aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, in?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- accordion 3 -->
+                    <div class="accordion-item">
+                        <!-- accordion header 3 -->
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-target="#accordion3" data-bs-toggle="collapse">Fast Delivery</button>
+                        </div>
+                        <!-- accordion body 3 -->
+                        <div class="accordion-collapse collapse" id="accordion3" data-bs-parent="#accordion-parent">
+                            <div class="accordion-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur molestiae, est assumenda pariatur laboriosam iure earum, molestias dolore, maiores doloremque ipsam labore minima sapiente officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda neque quisquam in nihil harum fugit laudantium officiis unde soluta optio?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- accordion 4 -->
+                    <div class="accordion-item">
+                        <!-- accordion header 4 -->
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-target="#accordion4" data-bs-toggle="collapse">Friendly Seller</button>
+                        </div>
+                        <!-- accordion body 4 -->
+                        <div class="accordion-collapse collapse" id="accordion4" data-bs-parent="#accordion-parent">
+                            <div class="accordion-body">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aperiam dicta, voluptatibus suscipit voluptate autem qui. Fugit quos quidem labore sunt suscipit dolorem, velit, est a, deserunt doloremque fugiat voluptates.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </article>
+    <article class="container-lg about1">
+        <div class="grid">
+            <section class="about-img col">
+                <img src="https://cms.girav.nl/wp-content/uploads/2022/05/Homepag-block-square.jpg" class="img">
+            </section>
+            <aside class="about-content col">
+                <div class="about-text">
+                    <div class="about-title">
+                        <p class="mb-0">Multicolored</p>
+                    </div>
+                    <div class="about-desc">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="about-color">
+                        <span class="black"></span>
+                        <span class="gray"></span>
+                        <span class="navy"></span>
+                        <span class="maroon"></span>
+                        <span class="green me-2"></span>
+                        <a href="#morecolor">30+</a>
+                    </div>
+                    <div class="feedback">
+                        <div class="feedback-acc">
+                            <p class="me-2 mb-0">Mike Charlie</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                            </div>
+                        </div>
+                        <div class="feedback-text">So many type of shirt that i buy on this shop. I really love it with the color. I hope i will buy it again.</div>
+                    </div>
+                    <div class="feedback mt-4">
+                        <div class="feedback-acc">
+                            <p class="me-2 mb-0">James Bill</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                            </div>
+                        </div>
+                        <div class="feedback-text">
+                            Nice shirt, perfect color for the boys & i really like it.
+                        </div>
+                    </div>
+                </div>
+                <div class="about-button">
+                    <button class="btn btn-dark px-4">Shop Now <i class="fa-solid fa-arrow-right-long ms-2"></i></button>
+                </div>
+            </aside>
+        </div>
+    </article>
+    <article class="container-lg about2">
+        <div class="grid">
+            <section class="about-img">
+                <img src="https://cms.girav.nl/wp-content/uploads/2022/03/3-KOLOM-IMAGE-sixpacks-2.jpg" class="img">
+            </section>
+            <aside class="about-content">
+                <div class="about-text">
+                    <div class="about-title">
+                        <p class="mb-0">Soft Fabric Shirt</p>
+                    </div>
+                    <div class="about-desc">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="badges">
+                        <p class="badge mb-0 me-2 bg-success text-light py-2 px-3">Jersey</p>
+                        <p class="badge mb-0 bg-warning text-dark py-2 px-3">Cotton</p>
+                    </div>
+                    <div class="feedback mt-4">
+                        <div class="feedback-acc">
+                            <p class="me-2 mb-0">Sarah Gerrard</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                            </div>
+                        </div>
+                        <div class="feedback-text">
+                            Thank You 😍 for the fast delivery. My son loves this shirt. Very soft fabric. I will repeat next week.
+                        </div>
+                    </div>
+                    <div class="feedback mt-4">
+                        <div class="feedback-acc">
+                            <p class="me-2 mb-0">Khong Leow</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                                <i class="fa-solid fa-star" style="color:gold;"></i>
+                            </div>
+                        </div>
+                        <div class="feedback-text">
+                            Finally my clothes for summer have arrived. Soft & cool fabric. I give 5 stars
+                        </div>
+                    </div>
+                </div>
+                <div class="about-button">
+                    <a href="#" class="btn btn-dark px-4">Shop Now <i class="fa-solid fa-arrow-right-long ms-2"></i></a>
+                </div>
+            </aside>
+        </div>
+    </article>
+    <article class="container-lg about3">
+        <div class="title-text">
+            <div class="title">
+                <p class="h1 text-center mb-5">Sizing</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="image">
+                <img src="https://cms.girav.nl/wp-content/uploads/2021/10/export-gir-girav-3lengtes-hp3.jpg" class="img">
+            </div>
+            <div class="text">
+                <div class="title">
+                    <p class="h2 mb-0">3 Difference Size</p>
+                    <p class="title-desc">Unique sizing system based on height, weight and physique.</p>
+                </div>
+                <ul class="desc">
+                    <li><i class="fa-solid fa-shirt text-danger"></i>
+                        <b>Standard</b> Long Fit ( /SLF ) for men up to 1.85m.
+                         The shirts are 2 – 4 cm longer.
+                    </li>
+                    <li><i class="fa-solid fa-shirt text-warning"></i>
+                        <b>Long</b> Fit ( /LF ) for men from 1.85m to 2m.
+                        The shirts are 4 – 8 cm longer.
+                    </li>
+                    <li><i class="fa-solid fa-shirt text-success"></i>
+                        <b>Extra</b> Long Fit ( /XLF ) for men from 2m.
+                        The shirts are 8 – 12 cm longer.
+                    </li>
+                </ul>
+                <div class="about-button w-100">
+                    <a href="#" class="btn float-end btn-dark px-4">Check Your Size <i class="fa-solid fa-arrow-right-long ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </article>
+    <div class="container-fluid p-0 container-footer" style="background-color: #fff;">
+        <footer class="text-center pt-4 footer">
+            <div class="container p-4">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="mb-4" style="color: #444;">Our Mission</h5>
+                        <ul class="mb-4 list">
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Collections</a></li>
+                            <li><a href="#">Environmental philosophy</a></li>
+                            <li><a href="#">Artist collaborations</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5 class="mb-4" style="color:#444;">Assistance</h5>
+                        <ul class="list">
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Size Guide</a></li>
+                            <li><a href="#">Shipping Information</a></li>
+                            <li><a href="#">Returns & Exchanges</a></li>
+                            <li><a href="#">Payment</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5 class="mb-4" style="color:#444;">Careers</h5>
+                        <ul class="list">
+                            <li><a href="#">Jobs</a></li>
+                        </ul>
+                    </div>
+                    <div class="col col-input">
+                        <h5 class="mb-4" style="color:#444;">Sign Up</h5>
+                        <div class="form-outline form-white mb-4">
+                            <input type="email" id="form5Example2" class="form-control" placeholder="Email Address..."/>
+                        </div>
+                        <button type="submit" class="btn btn-primary px-4 btn-block">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center py-4"> 
+                <p class="h4 m-0 text-uppercase">repace</p>
+                <p class="m-0 moto">© 2022 Copyright : Repace Clothing</p>
+                <div class="icon-footer m-0">
+                    <a href="https://github.com/Fyyqq" target="_blank" data-bs-toggle="tooltip" title="visit Github"><i class="fa-brands fa-github"></i></a>
+                    <a href="#twitter" data-bs-toggle="tooltip" title="visit Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#instagram" data-bs-toggle="tooltip" title="visit Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#facebook" data-bs-toggle="tooltip" title="visit Facebook"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+
+@use 'variable' as var;
+
+.about2 {
+    margin: 120px auto;
+    padding: 50px;
+    .grid {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .about-img {
+            overflow: hidden;
+            order: 2;
+            width: 100%;
+            .img {
+                width: 100%;
+                z-index: 99;
+                cursor: pointer;
+            }
+            .img:hover {
+                transform: scale(1.08);
+                transition: transform .4s ease-in-out;
+            }
+        }
+        .about-content {
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            width: 100%;
+            height: 100%;
+            order: 1;
+            display: flex;
+            background-color: #fff;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px 20px 30px;
+            .about-text {
+                .about-title {
+                    p {
+                        font-size: 50px;
+                        color: #444;
+                        font-family: var.$titleFont;
+                    }
+                }
+                .about-desc {
+                    p {
+                        font-size: 14.5px;
+                        color: #888;
+                        font-family: var.$textFont;
+                    }
+                }
+                .badges {
+                    margin-top: 30px;
+                    margin-bottom: 35px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+                .feedback {
+                    border: 1px solid rgb(201, 201, 201);
+                    border-radius: 10px;
+                    margin-top: 48px;
+                    .feedback-acc {
+                        padding: 7px 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-bottom: 1px solid rgb(204, 203, 203);
+                        .fa-star {
+                            font-size: 16px;
+                        }
+                        .me-2 {
+                            color: #333;
+                            font-size: 14.5px;
+                            font-family: var.$titleFont;
+                            font-weight: 600;
+                            letter-spacing: .5px;
+                        }
+                        }
+                    }
+                    .feedback-text {
+                        color: #666;
+                        font-size: 14.5px;
+                        padding: 12px;
+                }
+            }
+            .about-button {
+                width: 100%;
+                .btn {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .about2 {
+        padding: 30px;
+        .grid {
+            .about-img {
+                .img {
+                    width: 100%;
+                }
+            }
+            .about-content {
+                padding: 20px 30px 20px 30px;
+                .about-text {
+                    .about-title {
+                        p {
+                            font-size: 32px;
+                        }
+                    }
+                    .about-desc {
+                        p {
+                            font-size: 13.5px;
+                        }
+                    }
+                    .badges {
+                        margin: 10px 0;
+                    }
+                    .feedback {
+                        margin-top: 5px;
+                        .feedback-acc {
+                            padding: 7px 15px;
+                            .fa-star {
+                                font-size: 14px;
+                            }
+                            .me-2 {
+                                font-size: 14px;
+                            }
+                        }
+                        .feedback-text {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .about-button {
+                    padding-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+/* tablet size */
+@media screen and (max-width: 765px) {
+    .about1, .about2 {
+        margin-top: 120px;
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            .about-img {order: 1;}
+            .about-content {
+                order: 2;
+                .about-button {
+                    width: 100%;
+                    .btn {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* mobile phone size */
+@media screen and (max-width: 500px) {
+    .about1, .about2 {
+        margin-top: 120px;
+        padding: 0;
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+    .about2 {
+        padding: 0px;
+        .grid {
+            .about-content {
+                padding: 20px 10px 20px 10px;
+                .about-text {
+                    .about-title {
+                        p {
+                            font-size: 30px;
+                            text-align: center;
+                        }
+                    }
+                    .about-desc {
+                        p {
+                            font-size: 13px;
+                            text-align: center;
+                        }
+                    }
+                    .badges {
+                        margin: 20px 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .about-button {
+                    padding-top: 20px;
+                    display: grid;
+                    place-items: center;
+                    .btn {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}

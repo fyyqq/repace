@@ -1,0 +1,116 @@
+
+@use 'variable' as var;
+
+.navbar {
+    background-color: map-get($map: var.$bgc, $key: 'light');
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    .container-fluid {
+        .navbar-brand {
+            .title-logo {
+                font-family: var.$titleFont;
+                font-size: 25px;
+                color: map-get($map: var.$txtcolor, $key: 'brand-text');
+                letter-spacing: 2.5px;
+                text-transform: uppercase;
+            }
+        }
+        .navbar-toggler {
+            .fa-bars-staggered {
+                color: gainsboro;
+            }
+        }
+        .navbar-collapse {
+            .navbar-nav {
+                .nav-link {
+                    font-weight: 600;
+                    font-size: 16px;
+                    font-family: var.$titleFont;
+                    font-weight: normal;
+                    letter-spacing: .2px;
+                    color: map-get($map: var.$txtcolor, $key: 'nav-list');
+                }
+                .nav-link:hover {
+                    color: #222;
+                }
+                .nav-cart {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar {
+        padding-right: 10px;
+        padding-left: 10px;
+        .container-fluid {
+            .navbar-brand {
+                .title-logo {
+                    font-family: var.$titleFont;
+                    font-size: 22px;
+                    letter-spacing: 2.5px;
+                }
+            }
+        }
+        .navbar-collapse {
+            .navbar-nav {
+                .dropdown {
+                    padding-right: 12px;
+                }
+                .nav-link-cart {
+                    padding-right: 7px;
+                }
+            }
+        }
+    }
+}
+
+/* tablet size */
+@media screen and (max-width: 765px) {
+    .navbar {
+        .container-fluid {
+            .navbar-collapse {
+                .navbar-brand {
+                    .title-logo {
+                        font-family: var.$titleFont;
+                        font-size: 20.5px;
+                        letter-spacing: 2.5px;
+                    }
+                }
+                .navbar-nav {
+                    .nav-link-cart {
+                        display: none;
+                    }
+                .nav-cart {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* mobile phone size */
+@media screen and (max-width: 500px) {
+    .navbar {
+        .container-fluid {
+            .navbar-brand {
+                .title-logo {
+                    font-size: 20px;
+                }
+            }
+            .navbar-collapse {
+                .navbar-nav {
+                    li {
+                        .nav-link {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
