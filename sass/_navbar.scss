@@ -16,6 +16,7 @@
             }
         }
         .navbar-collapse {
+            transition: all .3s ease;
             .navbar-nav {
                 .nav-link {
                     font-weight: 700;

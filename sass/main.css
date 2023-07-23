@@ -13,6 +13,9 @@
   letter-spacing: 2.5px;
   text-transform: uppercase;
 }
+.navbar .container-fluid .navbar-collapse {
+  transition: all 0.3s ease;
+}
 .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link {
   font-weight: 700;
   font-size: 14.5px;
