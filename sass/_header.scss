@@ -1,35 +1,41 @@
 @use 'variable' as var;
 
 .header {
-    width: 100%;
-    height: max-content;
     margin-top: 170px;
     .row {
         display: grid;
         grid-template-columns: 1fr .7fr;
-        height: 100%;
         align-items: center;
         .first-col {
-            margin-top: -20px;
+            margin-top: -10px;
             display: flex;
             flex-direction: column;
+            p {
+                font-size: 23px;
+                font-family: var.$titleFont;
+            }
             .display-2 {
                 font-size: 60px;
                 color: rgba(51, 51, 51, 0.918);
                 font-family: var.$titleFont;
-                margin-bottom: 10px;
             }
             small {
                 padding-left: 5px;
-                color: rgb(110, 110, 110);
-                font-size: 15px;
+                margin-top: 5px;
                 font-family: var.$titleFont;
             }
             a {
+                margin-top: 25px;
                 width: 150px;
-                font-size: 14px;
-                padding-top: 8px;
-                padding-bottom: 8px;
+                font-size: 12px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                background-color: map-get($map: var.$bgc, $key: 'main');
+                letter-spacing: 1px;
+            }
+            a:hover .fa-angles-right {
+                transform: translateX(7px);
+                transition: transform .5s ease-in-out;
             }
         }
         .second-col {
@@ -46,70 +52,27 @@
     }
 }
 
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 992px) {
     .header {
         .row {
             .first-col {
+                display: flex;
+                justify-content: center;
+                p {
+                    font-size: 20px;
+                }
                 .display-2 {
                     font-size: 50px;
                 }
-                .w-75 {
-                    font-size: 14px;
-                }
             }
             .second-col {
                 .d-flex {
-                    flex: 0 0 auto;
-                    width: 290px;
-                }
-            }
-        }
-    }
-}
-
-
-@media screen and (max-width: 950px) {
-    .header {
-        .row {
-            .first-col {
-                padding-left: 50px;
-                .display-2 {
-                    font-size: 45px;
-                }
-            }
-        }
-    }
-}
-
-/* tablet size */
-@media screen and (max-width: 765px) {
-    .header {
-        .row {
-            display: grid;
-            grid-template-columns: 1fr;
-            height: 100%;
-            .first-col {
-                margin-top: 115px;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                .w-75 {
-                    text-align: center;
-                }
-            }
-            .second-col {
-                display: none;
-                .d-flex {
-                    display: none;
-                    flex: 0 0 auto;
-                    width: 50%;
+                    flex: unset;
+                    width: 300px;
                     .carousel {
-                        display: none;
+                        .carousel-inner {
+                            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                        }
                     }
                 }
             }
@@ -117,27 +80,47 @@
     }
 }
 
-/* mobile phone size */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 765px) {
     .header {
-        width: 100%;
-        height: 550px;
         .row {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: flex-start;
+            row-gap: 30px;
             .first-col {
-                margin-top: 50px;
+                width: 100%;
+                height: 100%;
                 display: flex;
-                justify-content: center;
                 align-items: center;
+                justify-content: center;
+                p {
+                    font-size: 20px;
+                }
                 .display-2 {
-                    font-size: 38px;
-                    text-align: center;
-                    width: 80%;
+                    font-size: 45px;
                 }
                 .w-75 {
-                    font-size: 13px;
+                    text-align: center;
                 }
-                .btn {
-                    font-size: 14px;
+                a {
+                    margin-top: 20px;
+                    width: 130px;
+                    font-size: 11.5px;
+                    padding-top: 9px;
+                    padding-bottom: 9px;
+                    background-color: map-get($map: var.$bgc, $key: 'main');
+                    letter-spacing: 1px;
+                }
+            }
+            .second-col {
+                .d-flex {
+                    justify-content: center;
+                    width: 300px;
+                    .carousel {
+                        .carousel-inner {
+                            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                        }
+                    }
                 }
             }
         }
