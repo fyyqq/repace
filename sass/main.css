@@ -46,11 +46,10 @@
     font-size: 18px;
   }
   .navbar .container-fluid .navbar-collapse .navbar-nav {
-    margin-top: 15px;
     text-align: center;
   }
   .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link {
-    font-size: 13px;
+    font-size: 14px;
   }
   .navbar .container-fluid .navbar-collapse .nav-link {
     transform: translateY(0px);
