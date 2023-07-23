@@ -48,13 +48,17 @@
                 a {
                     .fa-brands {
                         color: #555;
-                        font-size: 21px;
+                        font-size: 18px;
+                        cursor: pointer;
+                    }
+                    .fa-solid {
+                        color: #555;
+                        font-size: 17px;
                         cursor: pointer;
                     }
                     .fa-github:hover {color: #000;}
-                    .fa-twitter:hover {color: rgb(91, 168, 219);}
-                    .fa-instagram:hover {color: crimson;}
-                    .fa-facebook:hover {color: royalblue;}
+                    .fa-linkedin:hover {color: royalblue;}
+                    .fa-globe:hover {color: #000;}
                 }
             }
         }

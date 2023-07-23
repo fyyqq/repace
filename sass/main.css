@@ -75,9 +75,6 @@
 .modal .modal-dialog .modal-content .modal-body .p-2 .form-control::-moz-placeholder {
   font-size: 14px;
 }
-.modal .modal-dialog .modal-content .modal-body .p-2 .form-control:-ms-input-placeholder {
-  font-size: 14px;
-}
 .modal .modal-dialog .modal-content .modal-body .p-2 .form-control::placeholder {
   font-size: 14px;
 }
@@ -91,14 +88,14 @@
 }
 
 .header {
-  padding-top: 90px;
   width: 100%;
-  height: 650px;
-  overflow: hidden;
+  height: -moz-max-content;
+  height: max-content;
+  margin-top: 170px;
 }
 .header .row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 0.7fr;
   height: 100%;
   align-items: center;
 }
@@ -108,15 +105,22 @@
   flex-direction: column;
 }
 .header .row .first-col .display-2 {
-  font-size: 65px;
+  font-size: 60px;
   color: rgba(51, 51, 51, 0.918);
   font-family: "Lato", sans-serif;
+  margin-bottom: 10px;
 }
-.header .row .first-col .w-75 {
+.header .row .first-col small {
   padding-left: 5px;
   color: rgb(110, 110, 110);
-  font-size: 16px;
+  font-size: 15px;
   font-family: "Lato", sans-serif;
+}
+.header .row .first-col a {
+  width: 150px;
+  font-size: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 .header .row .second-col .d-flex {
   flex: 0 0 auto;
@@ -1038,20 +1042,22 @@
 }
 .container-footer .footer .text-center .icon-footer a .fa-brands {
   color: #555;
-  font-size: 21px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.container-footer .footer .text-center .icon-footer a .fa-solid {
+  color: #555;
+  font-size: 17px;
   cursor: pointer;
 }
 .container-footer .footer .text-center .icon-footer a .fa-github:hover {
   color: #000;
 }
-.container-footer .footer .text-center .icon-footer a .fa-twitter:hover {
-  color: rgb(91, 168, 219);
-}
-.container-footer .footer .text-center .icon-footer a .fa-instagram:hover {
-  color: crimson;
-}
-.container-footer .footer .text-center .icon-footer a .fa-facebook:hover {
+.container-footer .footer .text-center .icon-footer a .fa-linkedin:hover {
   color: royalblue;
+}
+.container-footer .footer .text-center .icon-footer a .fa-globe:hover {
+  color: #000;
 }
 
 * {

@@ -7,51 +7,41 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/5e539df1ae.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="sass/main.css">
     <title>Repace - Get Your Favourite Casual Shirt Here</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css">
 </head>
 <body>
-    <span id="home"></span>
     <nav class="navbar navbar-expand-md fixed-top">
         <div class="container-fluid d-flex px-md-5 px-3">
-            <!-- navbar-logo -->
-            <a href="#home" class="navbar-brand">
+            <a href="" class="navbar-brand">
                 <span class="h3 title-logo">Repace</span>
             </a>
-            <!-- navbar-btn -->
             <button class="navbar-toggler" data-bs-target="#showNavbar" data-bs-toggle="collapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- navbar-list -->
             <div class="navbar-collapse collapse" id="showNavbar">
                 <div class="mx-auto"></div>
                 <div class="navbar-nav">
-                    <!-- first list-link -->
                     <li class="me-md-2 me-0">
                         <a href="#home" class="nav-link" style="padding-bottom: 5px;">Home</a>
                     </li>
-                    <!-- second list-link -->
                     <li class="me-md-2 me-0">
                         <a href="#about" class="nav-link">About</a>
                     </li>
-                    <!-- third list-link -->
                     <li class="me-md-3 me-0">
-                        <a href="" class="nav-link">Product</a>
+                        <a href="/product.html" class="nav-link">Product</a>
                     </li>
-                    <!-- fourth list link -->
                     <li class="mb-md-0 mb-2 me-md-2 me-0 nav-cart">
                         <a href="#cart" class="nav-link">Cart</a>
                     </li>
-                    <!-- cart icon for dekstop screen only -->
                     <li class="me-md-4 me-0 mb-md-0 mb-2 nav-link-cart">
                         <a href="#cart" class="d-block text-center btn btn-outline-warning" data-bs-toggle="tooltip" title="go to cart">
                             <i class="fa-solid fa-cart-shopping position-relative" style="font-size: 14px;"></i>
                             <span class="badge bg-danger rounded-pill" style="position:absolute;top:13px;transform: translate(-2px, 1px);font-size: 0.68em;">0</span>
                         </a>
                     </li>
-                    <!-- sign up button -->
                     <li class="row">
-                        <!-- modal button -->
                         <button class="btn px-4 btn-primary" data-bs-toggle="modal" data-bs-target="#showSignUpModal" type="button">Sign Up</button>
                     </li>
                 </div>
@@ -140,19 +130,16 @@
             </div>
         </div>
     </div>
-
-    <header class="container-lg ps-0 pe-0 header">
+    <header class="container-lg ps-0 pe-0 header" id="home">
         <div class="row">
             <!-- Title Header -->
-            <div class="col first-col">
+            <div class="col first-col ps-md-5 ps-0">
                 <p class="display-2">Your Choice's Here</p>
-                <p class="w-75">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci maiores sunt magni.</p>
-                <a href="#explore" class="btn btn-outline-success position-relative mt-2" style="width:120px;">Explore
-                    <i class="fa-solid fa-arrow-down ms-2" style="font-size: 14px;"></i>
-                </a>
+                <small class="w-75 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+                <a href="#explore" class="btn btn-outline-success rounded-pill shadow-none mt-4">Explore <i>⟶</i></a>
             </div>
             <!-- Image Header -->
-            <div class="col-12 d-flex justify-content-center second-col" style="height:100%;">
+            <div class="col-12 d-flex justify-content-md-center justify-content-start second-col" style="height:100%;">
                 <div class="d-flex align-items-center">
                     <div class="carousel slide" id="carousel-btn" data-bs-ride="carousel">
                         <div class="carousel-inner" style="border: 6px solid white;border-radius: 15px;">
@@ -442,10 +429,9 @@
                 <p class="h4 m-0 text-uppercase">repace</p>
                 <p class="m-0 moto">© 2022 Copyright : Repace Clothing</p>
                 <div class="icon-footer m-0">
-                    <a href="https://github.com/Fyyqq" target="_blank" data-bs-toggle="tooltip" title="visit Github"><i class="fa-brands fa-github"></i></a>
-                    <a href="#twitter" data-bs-toggle="tooltip" title="visit Twitter"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#instagram" data-bs-toggle="tooltip" title="visit Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#facebook" data-bs-toggle="tooltip" title="visit Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://github.com/Fyyqq" target="_blank" data-bs-toggle="tooltip" title="Visit Github"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/fyqq" target="_blank" data-bs-toggle="tooltip" title="Visit Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#facebook" data-bs-toggle="tooltip" title="Visit Portfolio"><i class="fa-solid fa-globe"></i></a>
                 </div>
             </div>
         </footer>
