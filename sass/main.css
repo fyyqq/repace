@@ -2,74 +2,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 .navbar {
-  background-color: #fff;
+  background-color: rgb(235, 235, 235);
   width: 100%;
   padding: 20px 0;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .navbar .container-fluid .navbar-brand .title-logo {
   font-family: "Lato", sans-serif;
-  font-size: 25px;
-  color: #444;
+  font-size: 20px;
+  color: #222;
   letter-spacing: 2.5px;
   text-transform: uppercase;
 }
-.navbar .container-fluid .navbar-toggler .fa-bars-staggered {
-  color: gainsboro;
-}
 .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link {
-  font-weight: 600;
-  font-size: 16px;
-  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 14.5px;
+  font-family: "Nanum Gothic", sans-serif;
   font-weight: normal;
   letter-spacing: 0.2px;
-  color: #555;
+  color: #222;
+  transform: translateY(4px);
+  transition: all 0.3s ease;
 }
 .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link:hover {
-  color: #222;
+  color: #000;
 }
-.navbar .container-fluid .navbar-collapse .navbar-nav .nav-cart {
-  display: none;
+.navbar .container-fluid .navbar-collapse .navbar-nav li div {
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.navbar .container-fluid .navbar-collapse .navbar-nav li div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
-@media screen and (max-width: 1000px) {
-  .navbar {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-  .navbar .container-fluid .navbar-brand .title-logo {
-    font-family: "Lato", sans-serif;
-    font-size: 22px;
-    letter-spacing: 2.5px;
-  }
-  .navbar .navbar-collapse .navbar-nav .dropdown {
-    padding-right: 12px;
-  }
-  .navbar .navbar-collapse .navbar-nav .nav-link-cart {
-    padding-right: 7px;
-  }
-}
-/* tablet size */
 @media screen and (max-width: 765px) {
-  .navbar .container-fluid .navbar-collapse .navbar-brand .title-logo {
-    font-family: "Lato", sans-serif;
-    font-size: 20.5px;
-    letter-spacing: 2.5px;
-  }
-  .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link-cart {
-    display: none;
-  }
-  .navbar .container-fluid .navbar-collapse .navbar-nav .nav-cart {
-    display: block;
-  }
-}
-/* mobile phone size */
-@media screen and (max-width: 500px) {
   .navbar .container-fluid .navbar-brand .title-logo {
-    font-size: 20px;
+    font-size: 18px;
   }
-  .navbar .container-fluid .navbar-collapse .navbar-nav li .nav-link {
+  .navbar .container-fluid .navbar-collapse .navbar-nav {
+    margin-top: 15px;
+    text-align: center;
+  }
+  .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link {
     font-size: 13px;
+  }
+  .navbar .container-fluid .navbar-collapse .nav-link {
+    transform: translateY(0px);
   }
 }
 .modal .modal-dialog .modal-content .modal-body .p-2 .form-control::-moz-placeholder {
@@ -1067,5 +1048,5 @@
 }
 
 body {
-  background-color: #f2f2f2;
+  background-color: #fff;
 }/*# sourceMappingURL=main.css.map */
